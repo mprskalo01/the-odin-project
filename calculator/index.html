@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="index.js" defer></script>
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon.png">
+  <link rel="stylesheet" href="styles.css">
+  <title>Odin Calculator</title>
+</head>
+
+<body>
+  <h4>This is random text to make this an english language website</h4>
+  <main>
+    <div class="calculator">
+      <div class="displayScreen">
+        <sup class="previousNumber"></sup>
+        <h3 class="display"></h3>
+      </div>
+      <div class="buttons">
+        <div class="col1">
+          <button class=" button clear" value="CLEAR" onclick="clearEverything()">C</button>
+          <button class="button" value='bs' onclick="backspace()">⌫</button>
+          <button class="button" value='%' onclick="setModulOperator()">%</button>
+          <button class="button" value='divide' onclick="setDivideOperator()">/</button>
+        </div>
+        <div class="col2">
+          <button class="button" value=7 onclick="addNumber(7)">7</button>
+          <button class="button" value=8 onclick="addNumber(8)">8</button>
+          <button class="button" value=9 onclick="addNumber(9)">9</button>
+          <button class="button" value='multiply' onclick="setMultiplyOperator()">*</button>
+        </div>
+        <div class="col3">
+          <button class="button" value=4 onclick="addNumber(4)">4</button>
+          <button class="button" value=5 onclick="addNumber(5)">5</button>
+          <button class="button" value=6 onclick="addNumber(6)">6</button>
+          <button class="button" value='subtract' onclick="setSubtractOperator()">-</button>
+
+        </div>
+        <div class="col4">
+          <button class="button" value=1 onclick="addNumber(1)">1</button>
+          <button class="button" value=2 onclick="addNumber(2)">2</button>
+          <button class="button" value=3 onclick="addNumber(3)">3</button>
+          <button class="button" value='add' onclick="setAddOperator()">+</button>
+        </div>
+        <div class="col5">
+          <button class="button" value=".">.</button>
+          <button class="button" value=0 onclick="addNumber(0)">0</button>
+          <button class="button equals" value="=" onclick="operate()">=</button>
+
+
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+
+</html>
