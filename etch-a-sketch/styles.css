@@ -1,0 +1,32 @@
+#container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 720px;
+  height: 720px;
+  margin: 0 auto;
+  border: 3px solid black;
+  background-color: black;
+}
+
+.title {
+  text-align: center;
+}
+
+#setGridSize {
+  display: block;
+  padding: 1rem;
+  width: 12rem;
+  background-color: #15c6dd;
+  margin: 2rem auto;
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: all;
+  transition-duration: 500ms;
+}
+
+#setGridSize:hover {
+  scale: 120%;
+  cursor: pointer;
+}
