@@ -1,108 +1,123 @@
-const add = (a, b) => {
-  return a + b
-}
-
-const subtract = (a, b) => {
-  return a - b
-}
-
-const multiply = (a, b) => {
-  return a * b
-}
-
+const add = (a, b) => a + b
+const subtract = (a, b) => a - b
+const multiply = (a, b) => a * b
 const divide = (a, b) => {
+  if (b === 0) {
+    alert('Cannot divide by 0')
+    clearEverything()
+    return null
+  }
   return a / b
 }
+const modulus = (a, b) => a % b
 
-const modul = (a, b) => {
-  return a % b
-}
-
-let firstNum = 5
+let firstNum = null
 let operator = ''
-let secondNum = 5
+let calculated = false
+let period = false
 
 const display = document.querySelector('.display')
 const previousNumber = document.querySelector('.previousNumber')
+const periodButton = document.querySelector('#period')
 
 const clearDisplay = () => {
   display.textContent = ''
+  period = false
+  disablePeriod(false)
 }
 
 const clearEverything = () => {
   clearDisplay()
   previousNumber.textContent = ''
+  operator = ''
+  calculated = false
+  firstNum = null
 }
 
 const addNumber = (value) => {
-  if (value == 0 && display.textContent == '') {
-    console.log('Cant begin with 0')
-  } else {
-    display.textContent += value
+  if (calculated && previousNumber.textContent == '') {
+    clearEverything()
   }
+  display.textContent += value
 }
 
 const backspace = () => {
+  calculated = false
+  if (display.textContent.slice(-1) === '.') {
+    period = false
+    disablePeriod(false)
+  }
   display.textContent = display.textContent.slice(0, -1)
 }
 
-const setAddOperator = () => {
-  operator = '+'
-  if (previousNumber.textContent != '') {
-    previousNumber.textContent = operate()
+const setPeriod = () => {
+  if (!period && display.textContent !== '') {
+    period = true
+    display.textContent += '.'
+    disablePeriod(true)
   }
-  previousNumber.textContent = display.textContent
-  clearDisplay()
 }
-const setSubtractOperator = () => {
-  operator = '-'
-  if (previousNumber.textContent != '') {
-    previousNumber.textContent = operate()
+
+const disablePeriod = (disable) => {
+  if (disable) {
+    periodButton.disabled = true
+    periodButton.classList.add('disabled')
+  } else {
+    periodButton.disabled = false
+    periodButton.classList.remove('disabled')
   }
-  previousNumber.textContent = display.textContent
-  clearDisplay()
 }
-const setDivideOperator = () => {
-  operator = '/'
-  if (previousNumber.textContent != '') {
-    previousNumber.textContent = operate()
+
+const setOperator = (op) => {
+  if (display.textContent === '' || display.textContent === '.') return
+
+  if (firstNum !== null && !calculated) {
+    operate()
+  } else {
+    firstNum = parseFloat(display.textContent)
   }
-  previousNumber.textContent = display.textContent
-  clearDisplay()
-}
-const setMultiplyOperator = () => {
-  operator = '*'
-  if (previousNumber.textContent != '') {
-    previousNumber.textContent = operate()
-  }
-  previousNumber.textContent = display.textContent
-  clearDisplay()
-}
-const setModulOperator = () => {
-  operator = '%'
-  if (previousNumber.textContent != '') {
-    previousNumber.textContent = operate()
-  }
-  previousNumber.textContent = display.textContent
+
+  operator = op
+  previousNumber.textContent = `${firstNum} ${op}`
   clearDisplay()
 }
 
+const toFixedIfNecessary = (value) => +parseFloat(value).toFixed(6)
+
 const operate = () => {
-  firstNum = parseInt(previousNumber.textContent)
-  secondNum = parseInt(display.textContent)
-  clearDisplay()
-  previousNumber.textContent = ''
-  if (operator == '+') {
-    display.textContent = add(firstNum, secondNum)
-  } else if (operator == '-') {
-    display.textContent = subtract(firstNum, secondNum)
-  } else if (operator == '*') {
-    display.textContent = multiply(firstNum, secondNum)
-  } else if (operator == '/') {
-    display.textContent = divide(firstNum, secondNum)
-  } else if (operator == '%') {
-    display.textContent = modul(firstNum, secondNum)
-  } else {
-    display.textContent = console.log('Invalid operator')
+  if (
+    display.textContent === '' ||
+    display.textContent === '.' ||
+    firstNum === null
+  )
+    return
+  const secondNum = parseFloat(display.textContent)
+  let result
+  switch (operator) {
+    case '+':
+      result = add(firstNum, secondNum)
+      break
+    case '-':
+      result = subtract(firstNum, secondNum)
+      break
+    case '*':
+      result = multiply(firstNum, secondNum)
+      break
+    case '/':
+      result = divide(firstNum, secondNum)
+      if (result === null) return // division by 0
+      break
+    case '%':
+      result = modulus(firstNum, secondNum)
+      break
+    default:
+      console.log('Invalid operator')
+      return
   }
+
+  display.textContent = toFixedIfNecessary(result)
+  previousNumber.textContent = ''
+  operator = ''
+  calculated = true
+  firstNum = result
 }
