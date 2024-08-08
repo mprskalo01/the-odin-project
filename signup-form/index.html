@@ -17,28 +17,59 @@
         <div class="logo"></div>
         <h1 class="hero-title">ODIN</h1>
       </div>
+      <h2 class="imageAuthor">Photo by <a href="https://unsplash.com/@haliewestphoto" target="_blank">Halie West</a> on
+        <a href="https://unsplash.com/photos/green-leaf-plant-in-close-up-photography-25xggax4bSA"
+          target="_blank">unsplash</a></h2>
     </div>
     <main class="main">
       <section class="banner">
-        <div class="banner-text">
-          <h2 class="banner-title">
+        <div class="bannerText">
+          <h2 class="bannerTitle">
             This is not a real online service! You know you need something like this in your life to help you realize
             your deepest dreams.
           </h2>
-          <h2 class="banner-title">Sign up now to get started.</h2>
-          <h2 class="you-know">You know you want to.</h2>
+          <h2 class="bannerTitle">Sign up now to get started.</h2>
+          <h2 class="youKnow">You know you want to.</h2>
         </div>
       </section>
-      <div class="form-container">
-        <form action="" method="post" class="form">
+      <div class="formContainer">
+        <form action="./index.html" method="post" class="form" id="form">
           <title>Let's do this!</title>
-          <label for="firstName">FIRST NAME</label>
-          <input type="text" name="firstName" id="firstName">
+          <div class="formInputDivWrapper">
+            <div class="formInputDiv">
+              <label for="firstName">FIRST NAME</label>
+              <input type="text" name="firstName" id="firstName" required>
+            </div>
+            <div class="formInputDiv">
+              <label for="lastName">LAST NAME</label>
+              <input type="text" name="lastName" id="lastName" required>
+            </div>
+          </div>
+          <div class="formInputDivWrapper">
+            <div class="formInputDiv">
+              <label for="email">EMAIL</label>
+              <input type="email" name="email" id="email" required>
+            </div>
+            <div class="formInputDiv">
+              <label for="phoneNumber">PHONE NUMBER</label>
+              <input type="tel" name="phoneNumber" id="phoneNumber" required>
+            </div>
+          </div>
+          <div class="formInputDivWrapper">
+            <div class="formInputDiv">
+              <label for="password">PASSWORD</label>
+              <input type="password" name="password" id="password" required>
+            </div>
+            <div class="formInputDiv">
+              <label for="confirmPassword">CONFIRM PASSWORD</label>
+              <input type="password" name="confirmPassword" id="confirmPassword" required>
+            </div>
+          </div>
         </form>
       </div>
       <footer class="footer">
-        <div class="footer-text">
-          <button class="createButton">Create Account</button>
+        <div class="footerText">
+          <button class="createButton" type="submit" form="form" value="submit">Create Account</button>
           <h3 class="already">Already have an Account ? <span class="login">Log In.</span></h3>
         </div>
       </footer>

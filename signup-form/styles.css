@@ -44,33 +44,50 @@
   background-image: url('./assets/images/odin-lined.png');
 }
 
+.imageAuthor {
+  position: absolute;
+  width: 30vw;
+  left: 0;
+  bottom: 0;
+  color: #eeebeb;
+  text-align: center;
+  font-size: small;
+  padding-bottom: 1rem;
+}
+
+.imageAuthor > a {
+  text-decoration: underline;
+  color: #eeebeb;
+  font-style: italic;
+}
+
 .banner {
   height: 30vh;
   width: 70vw;
   background-color: #d8d5d5;
 }
 
-.banner-text {
+.bannerText {
   padding-left: 4rem;
   padding-top: 6rem;
 }
 
-.banner-title {
+.bannerTitle {
   padding-top: 0.25rem;
   text-align: left;
   font-weight: 600;
 }
 
-.you-know {
+.youKnow {
   text-align: left;
   font-weight: 600;
   padding-top: 2rem;
 }
 
-.form-container {
+.formContainer {
   height: 40vh;
   width: 70vw;
-  background-color: blanchedalmond;
+  background-color: #fcfcfc;
 }
 
 .form {
@@ -78,10 +95,36 @@
   flex-direction: column;
   padding-left: 4rem;
   padding-top: 4rem;
+  gap: 2rem;
 }
 
-input {
-  width: 8rem;
+.formInputDivWrapper {
+  display: flex;
+  gap: 12rem;
+}
+
+.formInputDiv {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.formInputDiv > label {
+  font-size: 1rem;
+  color: #2c2c2c;
+}
+
+.formInputDiv > input {
+  width: 14rem;
+  border-radius: 4px;
+  border: 2px solid #e5e7eb;
+}
+.formInputDiv > input:focus {
+  border: 2px solid #7fc3fa;
+}
+
+.formInputDiv > input:invalid {
+  border: 2px solid #e61818;
 }
 
 .footer {
@@ -90,7 +133,7 @@ input {
   background-color: #d8d5d5;
 }
 
-.footer-text {
+.footerText {
   display: flex;
   flex-direction: column;
   padding-top: 4rem;
@@ -103,7 +146,7 @@ input {
   height: 3rem;
   border-radius: 12px;
   text-align: center;
-  background-color: #315e17;
+  background-color: #596d48;
   font-weight: bold;
   color: #fff;
 }
@@ -118,7 +161,7 @@ input {
 }
 
 .login {
-  color: #315e17;
+  color: #596d48;
   font-weight: bold;
   cursor: pointer;
 }
