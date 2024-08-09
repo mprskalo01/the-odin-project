@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="index.js" defer></script>
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon.png">
+  <link rel="stylesheet" href="styles.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <header>
+    <h1>My Library</h1>
+  </header>
+  <main>
+    <div class="mainHeader">
+      <h1>My Books</h1>
+      <button class="addBook">Add your own book</button>
+    </div>
+    <section class="bookContainer">
+
+    </section>
+    <dialog id="dialog" class="dialogShown">
+      <form method="dialog" class="form">
+        <label for="bookTitleInput">Book Title: </label>
+        <input type="text" name="bookTitleInput" id="bookTitleInput" placeholder="bookTitleInput" required>
+        <label for="bookAuthorInput">Author: </label>
+        <input type="text" name="bookAuthorInput" id="bookAuthorInput" placeholder="bookAuthorInput" required>
+        <label for="pagesInput">Number of pagesInput: </label>
+        <input type="number" name="pagesInput" id="pagesInput" placeholder="pagesInput" required>
+        <div class="checkboxDiv">
+          <label for="isReadInput">Have you read the book ? </label>
+          <input type="checkbox" name="isReadInput" id="isReadInput">
+        </div>
+        <div>
+          <input type="submit" id="novalidate-close" value="Cancel" formnovalidate />
+          <input type="submit" id="close" onclick="addBookToLibrary()" value="Add book" />
+        </div>
+      </form>
+    </dialog>
+  </main>
+</body>
+
+</html>

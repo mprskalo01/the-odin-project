@@ -1,0 +1,44 @@
+@import '../node_modules/modern-normalize/modern-normalize.css';
+
+header {
+  background-color: #535353;
+  padding: 2rem;
+  text-align: center;
+  color: #fff;
+}
+
+.mainHeader {
+  background-color: #e0dddd;
+  display: flex;
+  gap: 4rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.addBook {
+  background-color: #60f127;
+  padding: 1rem;
+  border-radius: 24px;
+}
+.addBook:hover {
+  background-color: #3cad0f;
+  cursor: pointer;
+}
+
+.bookContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.book {
+  border: 1px solid #000;
+  padding: 2rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
