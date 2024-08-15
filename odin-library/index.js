@@ -38,6 +38,7 @@ function addBookToLibrary() {
   const pagesInput = document.querySelector('#pagesInput')
   const isReadInput = document.querySelector('#isReadInput')
 
+  // add check for the inputs if any is not valid, make sure the user inputs them
   const inputBook = new Book(
     bookTitleInput.value,
     bookAuthorInput.value,
@@ -52,7 +53,7 @@ function displayBooks() {
   bookContainer.textContent = ''
   myLibrary.forEach((book, index) => {
     const bookCard = document.createElement('div')
-    bookCard.classList.add('book')
+    bookCard.classList.add('bookCard')
 
     const bookTitle = document.createElement('h1')
     bookTitle.classList.add('bookTitle')
@@ -70,6 +71,7 @@ function displayBooks() {
     bookCard.appendChild(pages)
 
     const status = document.createElement('p')
+    status.classList.add('readStatus')
     status.textContent = `Status: ${book.isRead ? 'Read' : 'Not read yet'}`
     bookCard.appendChild(status)
 

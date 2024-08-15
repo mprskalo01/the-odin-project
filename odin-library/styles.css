@@ -1,14 +1,18 @@
 @import '../node_modules/modern-normalize/modern-normalize.css';
 
+body {
+  background-color: #deb887;
+}
+
 header {
-  background-color: #535353;
+  background-color: #8b5a2b;
   padding: 2rem;
   text-align: center;
   color: #fff;
 }
 
 .mainHeader {
-  background-color: #e0dddd;
+  background-color: #fff8dc;
   display: flex;
   gap: 4rem;
   justify-content: center;
@@ -32,13 +36,45 @@ header {
   padding: 2rem;
 }
 
-.book {
-  border: 1px solid #000;
+.bookCard {
+  color: #ffd700;
   padding: 2rem;
+  height: 50vh;
+  text-align: center;
+  background-image: url('./bookBackground.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .form {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+}
+
+.readStatus {
+  margin-bottom: 12rem;
+}
+
+.toggleReadBtn {
+  background-color: #60f127;
+}
+
+.removeBookBtn {
+  background-color: #ff5741;
+}
+
+.toggleReadBtn,
+.removeBookBtn {
+  border-radius: 24px;
+  padding: 0.75rem 2rem;
+  cursor: pointer;
+  transition: all;
+  transition-duration: 300ms;
+  scale: 0.75;
+}
+
+.removeBookBtn:hover,
+.toggleReadBtn:hover {
+  scale: 1;
 }
