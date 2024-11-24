@@ -1,35 +1,40 @@
-# The Odin Project Journey 🚀
+# The Odin Project Learning Journey
 
-This repository documents my progress through [The Odin Project](https://www.theodinproject.com/), a free and open-source curriculum designed to teach full-stack web development through hands-on projects.
+## Overview
+Documentation of my full-stack web development education through The Odin Project's comprehensive curriculum. This repository showcases my projects and skills acquired during this learning journey.
 
----
+## Skills Acquired
 
-## About The Odin Project
+### Frontend
+- HTML5 & CSS3
+- Modern JavaScript (ES6+)
+- React
+- Responsive Design
 
-- **Comprehensive Roadmap**: A complete guide to becoming a developer, suitable for all experience levels 
-- **Learn by Building**: Projects integrated throughout the curriculum help build a strong portfolio
-- **Community Support**: Join a Discord community for help, advice, and collaboration
-- **Open Source**: Contribute to the curriculum and improve your GitHub skills
+### Backend
+- Node.js & Express
+- SQL Databases
+- RESTful APIs
 
----
+### Development Tools
+- Git & GitHub
+- Command Line
+- Test-Driven Development
 
-## Learned Through The Odin Project
+## Projects
+- Responsive web designs
+- Interactive JavaScript applications
+- Full-stack web applications
+- Database-driven systems
 
-This repository showcases the concepts and skills I've learned so far:
+## Learning Approach
+- Project-based learning
+- Real-world development practices
+- Community-driven growth
+- Open-source contribution
 
-  - **Front-End Development**: HTML, CSS, JavaScript, DOM Manipulation, React
-  - **Back-End Development**: Node.js, Express, SQL
-  - **Version Control**: Git and GitHub
+## Connect
+- Portfolio: [marioprskalo.dev](https://www.marioprskalo.dev/)
+- LinkedIn: [mprskalo01](https://linkedin.com/in/mprskalo01/)
 
-Further organization and project additions will be updated as I progress.
-
----
-
-## Connect with Me
-
-- [Portfolio](https://www.marioprskalo.dev/)  
-- [LinkedIn](https://linkedin.com/in/mprskalo01/)  
-
----
-
-Thanks for checking out my journey! 🚀
+Based on [The Odin Project](https://www.theodinproject.com/), an open-source curriculum for web development.
